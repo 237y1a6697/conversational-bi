@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+:root {
+  --font-mono: var(--font-share-tech-mono), 'Courier New', monospace;
+  --font-body: var(--font-rajdhani), sans-serif;
+  --font-display: var(--font-orbitron), sans-serif;
+
+  /* Colors */
+  --violet: #7C3AED;
+  --magenta: #E11D91;
+  --cyan: #00E5FF;
+  --lime: #A3E635;
+  --orange: #FF6B2B;
+  --coral: #FF4D6D;
+  --teal: #00CED1;
+  --purple-mid: #9333EA;
+
+  /* Dark Theme Tokens (Default) */
+  --bg-app: #0A0A0F;
+  --bg-panel: #0D0B14;
+  --bg-card: #111118;
+  --bg-card-hover: #161620;
+  --border-main: rgba(255,255,255,0.05);
+  --border-card: rgba(255,255,255,0.07);
+  --text-primary: #FFFFFF;
+  --text-secondary: #CBD5E1;
+  --text-muted: #64748B;
+  --input-bg: rgba(255,255,255,0.04);
+  --accent-glow: rgba(124,58,237,0.3);
+
+  /* KPI Tints */
+  --tint-violet: #1A1025;
+  --tint-magenta: #1A0E1A;
+  --tint-cyan: #0A1520;
+  --tint-lime: #141A0E;
+}
+
+.light {
+  --bg-app: #F1F5F9;
+  --bg-panel: #FFFFFF;
+  --bg-card: #F8FAFC;
+  --bg-card-hover: #FFFFFF;
+  --border-main: rgba(0,0,0,0.06);
+  --border-card: rgba(0,0,0,0.08);
+  --text-primary: #0F172A;
+  --text-secondary: #334155;
+  --text-muted: #64748B;
+  --input-bg: rgba(0,0,0,0.03);
+  --accent-glow: rgba(124,58,237,0.1);
+
+  /* KPI Tints Light */
+  --tint-violet: #F5F3FF;
+  --tint-magenta: #FDF2F8;
+  --tint-cyan: #ECFEFF;
+  --tint-lime: #F7FEE7;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  background: var(--bg-app);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #7C3AED, #E11D91);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #9333EA, #FF4D6D);
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #7C3AED, #E11D91);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Font utilities */
+.font-mono { font-family: var(--font-mono) !important; }
+.font-body { font-family: var(--font-body) !important; }
+.font-display { font-family: var(--font-display) !important; }
+
+/* Scrollbar hide */
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
