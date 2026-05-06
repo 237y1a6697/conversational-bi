@@ -1,9 +1,0 @@
-fastapi
-uvicorn
-python-multipart
-pandas
-groq
-python-dotenv
-pydantic
-openpyxl
-xlrd
